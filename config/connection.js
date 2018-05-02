@@ -6,9 +6,9 @@ if (process.env.JAWSDB-URL) {
 } else {
   connection = mysql.createConnection({
     host: 'localhost',
-    user: 'ss60byquyf9cold1',
-    password: 'htbsoo1e51mqxlnv',
-    database: 'burgers_db'
+    user: 'root',
+    password: 'hacktheplanet',
+    database: 'todoagain_db'
   });
 };
 
