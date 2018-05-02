@@ -28,7 +28,6 @@ var connection = mysql.createConnection({
 connection.connect(function (err) {
   if (err) throw err;
   // console.log("Connected as id " + connection.threadId);
-  callFunction();
 });
 
 // Export connection for our ORM to use.
