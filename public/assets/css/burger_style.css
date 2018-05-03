@@ -48,10 +48,19 @@ li {
   padding: 0;
 }
 
+.box {
+  border-radius: 10px;
+}
+
 h1 {
   font-size: 70px;
 }
 
 h2 {
   font-family: 'Homemade Apple', cursive;
+  padding-bottom: 10px;
+}
+
+h6 {
+  color: grey;
 }
