@@ -1,25 +1,21 @@
-<h1>Burgers!</h1>
+<div class="center title">
+<h1>Burger Bonanza!</h1>
+</div>
 
-<h2>Burgers to be eaten!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="row middle">
+  <div class="col center" id="notDevoured">
+    <h2>Burgers to be eaten!</h2>
+    {{burgers.id}}{{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+  </div>
 
-<h2>Burgers that you ate!</h2>
+  <div class="col center" id="Devoured">
+    <h2>Burgers that you ate!</h2>
+    {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+  </div>
+</div>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul> 
-
+<div class="center bottom">
 <h2>Add a Burger</h2>
 <form class="create-form">
 
@@ -28,11 +24,7 @@
     <input type="text" id="bg" name="name">
   </div>
 
-  {{!-- <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not Devoured
-  </div> --}}
 
-  <button type="submit">Add Burger</button>
+  <button class="btn btn-light no-pad" type="submit">Add Burger</button>
 </form>
+</div>
